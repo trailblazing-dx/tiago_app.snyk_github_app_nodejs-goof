@@ -29,8 +29,6 @@ var app = express();
 var routes = require('./routes');
 var routesUsers = require('./routes/users.js')
 
-var password_token = 'super-secret-f8ed84e8f41e4146403dd4a6bbcea5e418d24i7';
-
 // all environments
 app.set('port', process.env.PORT || 3001);
 app.engine('ejs', ejsEngine);
@@ -76,6 +74,8 @@ app.use(st({ path: './public', url: '/public' }));
 // Add the option to output (sanitized!) markdown
 marked.setOptions({ sanitize: true });
 app.locals.marked = marked;
+
+var github_token = 'gh-f8ed84e8f41e4146403dd4a6bbcea5e418d24i7';
 
 // development only
 if (app.get('env') == 'development') {

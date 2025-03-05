@@ -328,7 +328,7 @@ exports.chat = {
 
     const message = {
       // Default message icon. Cen be overwritten by user.
-      icon: '👋',
+      icon: '🙂',
     };
 
     _.merge(message, req.body.message, {
